@@ -1,2 +1,2 @@
 DELETE FROM genres
-WHERE GenreName = 'Reggae';
+WHERE name = 'Reggae';
