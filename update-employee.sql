@@ -1,4 +1,5 @@
-UPDATE employees
-SET Title = 'IT Manager',
-    ReportsTo = (SELECT EmployeeId FROM employees WHERE FirstName = 'Adams' AND LastName = 'Andrew')
-WHERE FirstName = 'Robert' AND LastName = 'King';
+   UPDATE employees
+   SET Title = 'IT Manager',
+       ReportsTo = 1  -- Remplacez par le bon ID que vous avez obtenu
+   WHERE FirstName = 'Robert' AND LastName = 'King';
+   
