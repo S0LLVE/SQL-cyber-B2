@@ -1,31 +1,32 @@
-INSERT INTO EmployeeId (
-    LastName, 
-    FirstName, 
-    Title, 
-    ReportsTo, 
-    BirthDate, 
-    HireDate, 
-    Address, 
-    City, 
-    State, 
-    Country, 
-    PostalCode, 
-    Phone, 
-    Fax, 
-    Email
-) VALUES (
-    'Doe', 
-    'John', 
-    'IT Developer', 
-    (SELECT id FROM employees WHERE FirstName = 'Michael' AND LastName = 'Mitchell'), 
-    '03-18-1999', 
-    '03-18-2020', 
-    '142 rue Sainte-Catherine', 
-    'Bordeaux', 
-    'NA', 
-    'France', 
-    '33000', 
-    '+33 6 77 88 99 10', 
-    '+33 5 68 89 90 90', 
-    'john.doe@gmail.com'
-);
+   INSERT INTO employees (
+       LastName, 
+       FirstName, 
+       Title, 
+       ReportsTo, 
+       BirthDate, 
+       HireDate, 
+       Address, 
+       City, 
+       State, 
+       Country, 
+       PostalCode, 
+       Phone, 
+       Fax, 
+       Email
+   ) VALUES (
+       'Doe', 
+       'John', 
+       'IT Developer', 
+       (SELECT employee_id FROM employees WHERE FirstName = 'Michael' AND LastName = 'Mitchell'), 
+       '03-18-1999', 
+       '03-18-2020', 
+       '142 rue Sainte-Catherine', 
+       'Bordeaux', 
+       'NA', 
+       'France', 
+       '33000', 
+       '+33 6 77 88 99 10', 
+       '+33 5 68 89 90 90', 
+       'john.doe@gmail.com'
+   );
+   
