@@ -1,4 +1,4 @@
 SELECT FirstName, LastName
 FROM customers
 WHERE Country = 'USA' 
-  AND SupportRepresentativeName = 'Peacock Jane';
+  AND SupportRep = 'Peacock Jane';
