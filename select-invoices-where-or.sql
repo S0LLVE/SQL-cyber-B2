@@ -1,4 +1,5 @@
    SELECT InvoiceId, Total
    FROM invoices
-   WHERE destination IN ('Paris', 'London');
+   WHERE billingCity = 'Paris'
+    OR BillingCity = 'London';
    
