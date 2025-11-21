@@ -1,4 +1,4 @@
-INSERT INTO employees (
+INSERT INTO EmployeeId (
     LastName, 
     FirstName, 
     Title, 
