@@ -1,1 +1,1 @@
-INSERT INTO genres (genre_name) VALUES ('Electro');
+INSERT INTO genre (genre_name) VALUES ('Electro');
