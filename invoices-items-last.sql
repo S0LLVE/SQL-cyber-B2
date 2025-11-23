@@ -1,11 +1,15 @@
 SELECT
   T.Name
-FROM Tracks AS T
-JOIN InvoiceLines AS IL
-  ON T.TrackId = IL.TrackId
+FROM tracks AS T
+JOIN invoice_items AS II
+  ON T.TrackId = II.TrackId
 WHERE
-  IL.InvoiceId = (
+  II.InvoiceId = (
     SELECT
-      MAX(InvoiceId)
-    FROM Invoices
+      InvoiceId
+    FROM invoices
+    ORDER BY
+      InvoiceDate DESC,
+      InvoiceId DESC -- en cas d’égalité de date, prendre le plus grand ID
+    LIMIT 1
   );
