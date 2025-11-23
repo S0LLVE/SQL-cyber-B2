@@ -6,10 +6,6 @@ JOIN InvoiceItems AS II
 WHERE
   II.InvoiceId = (
     SELECT
-      InvoiceId
+      MAX(InvoiceId)
     FROM Invoices
-    ORDER BY
-      InvoiceDate DESC,
-      InvoiceId DESC -- en cas d'égalité de date, prendre le plus grand ID
-    LIMIT 1
   );
