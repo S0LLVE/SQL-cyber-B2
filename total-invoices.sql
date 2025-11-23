@@ -1,5 +1,5 @@
 SELECT
-  UPPER(C.FirstName || ' ' || C.LastName) AS FullName,
+  (SUBSTR(C.FirstName, 1, 1) || LOWER(SUBSTR(C.FirstName, 2)) || ' ' || UPPER(C.LastName)) AS FullName,
   SUM(I.Total) AS AllInvoices
 FROM customers AS C
 JOIN invoices AS I
@@ -12,3 +12,4 @@ HAVING
   SUM(I.Total) > 38
 ORDER BY
   FullName ASC;
+  
