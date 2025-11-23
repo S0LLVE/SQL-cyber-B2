@@ -1,8 +1,6 @@
 SELECT
-  T.*
-FROM tracks AS T
-JOIN albums AS AL
-  ON T.AlbumId = AL.AlbumId
+  AL.* -- Sélectionne toutes les colonnes de la table albums
+FROM albums AS AL
 WHERE
   AL.Title IN (
     SELECT
