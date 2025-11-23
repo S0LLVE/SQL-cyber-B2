@@ -1,5 +1,5 @@
 SELECT
-  UPPER(E.FirstName || ' ' || E.LastName) AS FullName,
+  (SUBSTR(E.FirstName, 1, 1) || LOWER(SUBSTR(E.FirstName, 2)) || ' ' || UPPER(E.LastName)) AS FullName,
   COUNT(C.CustomerId) AS NumberOfCustomers
 FROM employees AS E
 JOIN customers AS C
@@ -12,4 +12,3 @@ GROUP BY
   E.LastName
 ORDER BY
   NumberOfCustomers ASC;
-  
